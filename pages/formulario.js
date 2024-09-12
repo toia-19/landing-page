@@ -1,5 +1,7 @@
+// Creamos constante "formDatos" que reciba del documento (HTML) el ID del formulario (mediante un querySelector)
 const formDatos = document.querySelector("#formulario");
 
+// Creamos constante "imprimirDatos" que se encargue de manejar el evento del formulario
 const imprimirDatos = (event) => {
     event.preventDefault(); // evita que se envíe de forma predeterminada
 
@@ -20,7 +22,5 @@ formDatos.addEventListener("submit", imprimirDatos); // escucha el evento "submi
  * }
  * 
  * Resultado esperado 2: JSON
- * {
- *     "nombre": "Maia", "apellido": "Ulloa"
- * }
+ * {"nombre": "Maia", "apellido": "Ulloa"}
  */
