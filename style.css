@@ -1,0 +1,155 @@
+.nav, .main, .footer {
+    background-color: rgb(4, 131, 205);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Navegador */
+.nav{
+    font-size: 25px;
+}
+
+.verde{
+    color: greenyellow;
+}
+
+.blanco{
+    color: white;
+}
+
+/* Contenido principal */
+.main{
+    padding: 1rem;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/*1ra Columna*/
+.cartelera {
+    display: flex;
+    flex-direction: column;
+
+    padding: 1rem;
+    width: 40rem;
+
+    background-color: rgba(194, 194, 194, 0.3);
+}
+
+.titulo{
+    font-size: 35px;
+    color: white;
+    background-color: rgba(194, 194, 194, 0);
+}
+
+.subtitulo{
+    color: greenyellow;
+    background-color: rgba(194, 194, 194, 0);
+}
+
+p{
+    color: white;
+    background-color: rgba(194, 194, 194, 0);
+}
+
+.parrafo{
+    max-height: 100px; /* Altura máxima del párrafo */
+    overflow: hidden; /* Oculta el contenido que excede la altura */
+    transition: max-height 0.5s ease;
+}
+
+.parrafo.expanded {
+    max-height: 200rem; /* Altura máxima cuando está expandido */
+}
+
+#btn-inscripcion{
+    margin: auto;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border-color: greenyellow;
+    
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: greenyellow;
+}
+
+#toggleButton{
+    margin: 1px;
+    color: white;
+
+    background-color: rgba(194, 194, 194, 0);
+}
+
+/* 2da Columna */
+.imagen{
+    margin-left: 1rem;
+}
+
+.cartelera-img{
+    height: 40rem;
+    width: 47rem;
+
+    object-fit: cover;
+}
+
+/*3ra Columna*/
+ul, li{
+    padding: 1rem;
+    list-style: none;
+}
+
+/* Menú derecho */
+#secciones{
+    color: white;
+    background-color: rgb(4, 131, 205);
+}
+
+#secciones li:hover{
+    color: greenyellow;
+}
+
+/* Pie de página */
+.footer{
+    position: relative;
+    padding: 0.5rem;
+    margin: auto;
+    bottom: 0;
+}
+
+/* Media querys */
+@media (min-width: 360px) and (max-width: 700px){
+    .nav, .main, .footer{
+        background-color: rgb(4, 131, 205);
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .main{
+        justify-content: space-around;
+        padding-bottom: 15.5rem;
+    }
+
+    .cartelera {
+        width: 20rem;
+        justify-content: column;
+        background-color: rgba(194, 194, 194, 0.3);
+    }
+
+    .cartelera-img{
+        display: none;
+    }
+
+    #btn-inscripcion{
+        margin: auto;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        border-color: greenyellow;
+        
+        color: white;
+        font-size: 15px;
+        font-weight: bold;
+        background-color: greenyellow;
+    }
+}

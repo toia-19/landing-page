@@ -1,0 +1,87 @@
+* {
+    background-color: rgb(4, 131, 205);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Navegador */
+.nav{
+    font-size: 25px;
+}
+
+.verde{
+    color: greenyellow;
+}
+
+.blanco{
+    color: white;
+}
+
+/* Contenido principal */
+.main {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Formulario */
+.formulario {
+    color: white;
+    font-size: 15px;
+
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+legend{
+    text-align: center;
+    font-size: larger;
+}
+
+.form-group{
+    padding: 1rem;
+}
+
+label{
+    padding-bottom: 0.5rem;
+}
+
+input{
+    color: white;
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
+
+input::placeholder{
+    color: white;
+}
+
+select, option{
+    color: white;
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
+
+textarea{
+    height: 5rem;
+    width: 100%;
+    display: block;
+    resize: none;
+}
+
+textarea::placeholder{
+    color: white;
+}
+
+/* Botón */
+.btn-enviar {
+    margin: auto;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border-color: greenyellow;
+
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: greenyellow;
+}

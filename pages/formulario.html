@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP1 - Programación Frontend</title>
+
+    <link rel="stylesheet" href="formulario.css">
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/2888/2888407.png" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Navegador -->
+    <div class="nav">
+        <b>
+            <span class="verde">.</span>
+            <span class="blanco">i</span>
+            <span class="verde">t</span>
+            <span class="blanco">s</span>
+        </b>
+    </div>
+
+    <div class="main">
+        <fieldset>
+            <form action="" method="post" class="formulario">
+                <legend>¡Bienvenido a las inscripciones!</legend>
+
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+
+                    <input id="nombre" name="nombre" placeholder="Ingrese su nombre:..." class="form-control" type="text" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="apellido">Apellido:</label>
+
+                    <input id="apellido" name="apellido" placeholder="Ingrese su apellido:..." class="form-control" type="text" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo electrónico:</label>
+
+                    <input id="email" name="email" placeholder="Ingrese su correo:..." class="form-control" type="mail" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="contrasena">Contraseña:</label>
+
+                    <input id="contrasena" name="contrasena" placeholder="Ingrese su contraseña:..." class="form-control" type="password" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="carrera">Indique a qué carrera se inscribe:</label>
+                    <select name="carrera" id="carrera" class="form-control selectpicker" required>
+                        <option selected>Seleccione una opción</option>
+                        <option value="dsfs">Des. de Software Full Stack</option>
+                        <option value="sysadmin">Sys Admin</option>
+                        <option value="devops">DevOps</option>
+                        <option value="cd">Ciencia de Datos</option>
+                        <option value="tst">Testing</option>
+                    </select>   
+                </div>
+            
+                <div class="form-group">
+                    <label for="mensaje">Breve descripción sobre usted:<label>
+                    <textarea id="mensaje" name="mensaje" class="form-control" placeholder="..." required></textarea>
+                </div>
+    
+                <div class="form-group">
+                    <button id="btn-enviar" type="submit" class="btn-enviar">Enviar</button>
+                </div>
+            </form>
+        </fieldset>
+    </div>
+
+    <!-- Pie de página -->
+    <div class="footer">
+        <b>
+            <span class="verde">by</span>
+            <span class="blanco">unknown</span>
+            <span class="verde">code</span>
+            <span><img src="/assets/i-yingyang.png" alt="Ícono Ying Yang" width="15px"></span>
+            <span class="verde">2024</span>
+        </b>
+    </div>
+
+    <script src="formulario.js"></script>
+</body>
+
+</html>
