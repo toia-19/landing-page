@@ -1,6 +1,18 @@
+/* Estilos generales */
+:root{
+    --white: #FFFF;
+    --primary: rgb(4, 131, 205);
+    --secondary: rgb(173, 255, 47);
+}
+
 * {
-    background-color: rgb(4, 131, 205);
     font-family: Arial, Helvetica, sans-serif;
+
+    background-color: var(--primary);
+}
+
+a{
+    text-decoration: none;
 }
 
 /* Navegador */
@@ -9,28 +21,34 @@
 }
 
 .verde{
-    color: greenyellow;
+    color: var(--secondary);
 }
 
 .blanco{
-    color: white;
+    color: var(--white);
 }
 
 /* Contenido principal */
 .main {
+    margin: auto;
     display: flex;
     justify-content: space-around;
 }
 
 /* Formulario */
 .formulario {
-    color: white;
     font-size: 15px;
-
     margin: 2rem;
+
     display: flex;
     justify-content: center;
     flex-direction: column;
+
+    color: var(--white);
+}
+
+fieldset{
+    border-style: double;
 }
 
 legend{
@@ -42,46 +60,54 @@ legend{
     padding: 1rem;
 }
 
-label{
-    padding-bottom: 0.5rem;
-}
-
 input{
-    color: white;
+    width: 100%;
+    margin-top: 0.5rem;
     padding: 0.5rem;
-    border-radius: 1rem;
-}
 
-input::placeholder{
-    color: white;
+    background-color: var(--white);
 }
 
 select, option{
-    color: white;
+    width: 100%;
+    margin-top: 0.5rem;
     padding: 0.5rem;
-    border-radius: 1rem;
+
+    background-color: var(--white);
 }
 
 textarea{
     height: 5rem;
     width: 100%;
+    margin-top: 0.5rem;
+
     display: block;
     resize: none;
-}
 
-textarea::placeholder{
-    color: white;
+    background-color: var(--white);
 }
 
 /* Botón */
 .btn-enviar {
     margin: auto;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    border-color: greenyellow;
+    display: flex;
 
-    color: white;
+    padding: 1rem;
     font-size: 15px;
     font-weight: bold;
-    background-color: greenyellow;
+
+    color: var(--white);
+    border-radius: 0.5rem;
+    border-color: var(--secondary);
+    background-color: var(--secondary);
+}
+
+/* media querys -> responsividad */
+@media (min-width: 360px) and (max-width: 700px){
+    
+    .btn-enviar{
+        width: 100%;
+
+        justify-content: center;
+    }
 }

@@ -22,10 +22,10 @@
         </b>
     </div>
 
-    <!-- Contenido principal -->
+    <!-- 1ra Columna: Contenido principal -->
     <div class="main">
         <div class="row">
-            <div class="col-5">
+            <div class="col">
                 <div class="cartelera">
                     <h1 class="titulo">Instituto Técnico Superior</h1>
                     <h2 class="subtitulo">Educación pública al alcance de todos</h2>
@@ -45,23 +45,34 @@
                 </div>
             </div>
 
-            <div class="col-6">
+            <!-- 2da Columna: Imagen representativa -->
+            <div class="col">
                 <div class="imagen">
                     <img src="/assets/codigo.jpg" alt="Código" class="cartelera-img">
                 </div>
             </div>
 
-            <div class="col-1">
-                <div class="icono-secciones">
-                    <ul>
-                        <li data-bs-toggle="offcanvas" data-bs-target="#secciones">
-                            <img src="/assets/i-linkedin.png" alt="Ícono LinkedIn" width="30px">
+            <!-- 3ra Columna: Lista de íconos/ redes -->
+            <div class="col">
+                <div class="icono-secciones">                    
+                    <ul id="list-icons">
+                        <li class="list-li" data-bs-toggle="offcanvas" data-bs-target="#secciones" title="Menú">
+                            <img src="/assets/i-menu.png" alt="Menu" width="30px">
                         </li>
-                        <li data-bs-toggle="offcanvas" data-bs-target="#secciones">
-                            <img src="/assets/i-facebook.png" alt="Ícono Facebook" width="30px">
+                        <li class="list-li" title="LinkedIn">
+                            <a href="https://www.linkedin.com/">
+                                <img src="/assets/i-linkedin.png" alt="Ícono LinkedIn" width="30px">
+                            </a>
                         </li>
-                        <li data-bs-toggle="offcanvas" data-bs-target="#secciones">
-                            <img src="/assets//i-github.png" alt="Ícono GitHub" width="30px">
+                        <li class="list-li" title="Facebook">
+                            <a href="https://www.facebook.com/">
+                                <img src="/assets/i-facebook.png" alt="Ícono Facebook" width="30px">
+                            </a>
+                        </li>
+                        <li class="list-li" title="GitHub">
+                            <a href="https://www.github.com/">
+                                <img src="/assets//i-github.png" alt="Ícono GitHub" width="30px">
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -74,7 +85,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
-                <ul>
+                <ul id="list-seccion">
                     <li onclick="alerta()">
                         Inicio
                     </li>

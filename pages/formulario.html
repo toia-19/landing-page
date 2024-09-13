@@ -13,18 +13,20 @@
 <body>
     <!-- Navegador -->
     <div class="nav">
-        <b>
-            <span class="verde">.</span>
-            <span class="blanco">i</span>
-            <span class="verde">t</span>
-            <span class="blanco">s</span>
-        </b>
+        <a href="/index.html">
+            <b>
+                <span class="verde">.</span>
+                <span class="blanco">i</span>
+                <span class="verde">t</span>
+                <span class="blanco">s</span>
+            </b>
+        </a>
     </div>
 
     <div class="main">
         <fieldset>
-            <form id="formulario" class="formulario" action="" method="post">
-                <legend>¡Bienvenido a las inscripciones!</legend>
+            <form id="formulario" action="" method="post" class="formulario">
+                <legend>Inscripción 2025</legend>
 
                 <div class="form-group">
                     <label for="nombre">Nombre:</label>
@@ -51,20 +53,21 @@
                 </div>
     
                 <div class="form-group">
+                    <!-- usar un JSON para populate el select -->
                     <label for="carrera">Indique a qué carrera se inscribe:</label>
-                    <select name="carrera" id="carrera" class="form-control selectpicker" required>
+                    <select name="carrera" id="opciones" class="form-control selectpicker" required>
                         <option selected>Seleccione una opción</option>
-                        <option value="dsfs">Des. de Software Full Stack</option>
-                        <option value="sysadmin">Sys Admin</option>
-                        <option value="devops">DevOps</option>
-                        <option value="cd">Ciencia de Datos</option>
-                        <option value="tst">Testing</option>
+                        <option value="Desarrollo de Software Full Stack">Des. de Software Full Stack</option>
+                        <option value="Sys Admin">Sys Admin</option>
+                        <option value="DevOps">DevOps</option>
+                        <option value="Ciencia de Datos">Ciencia de Datos</option>
+                        <option value="Testing">Testing</option>
                     </select>   
                 </div>
             
                 <div class="form-group">
                     <label for="mensaje">Breve descripción sobre usted:<label>
-                    <textarea id="mensaje" name="mensaje" class="form-control" placeholder="..." required></textarea>
+                    <textarea id="mensaje" name="mensaje" class="form-control" placeholder="Escriba aquí..." required></textarea>
                 </div>
     
                 <div class="form-group">

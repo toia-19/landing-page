@@ -1,6 +1,21 @@
+/* Estilos generales */
+:root{
+    --white: #FFFF;
+    --primary: rgb(4, 131, 205);
+    --secondary: rgb(173, 255, 47);
+    /* Transparencia */
+    --transparent1: rgba(194, 194, 194, 0);
+    --transparent2: rgba(194, 194, 194, 0.3);
+}
+
+a{
+    text-decoration: none;
+}
+
 .nav, .main, .footer {
-    background-color: rgb(4, 131, 205);
     font-family: Arial, Helvetica, sans-serif;
+
+    background-color: var(--primary);
 }
 
 /* Navegador */
@@ -9,11 +24,11 @@
 }
 
 .verde{
-    color: greenyellow;
+    color: var(--secondary);
 }
 
 .blanco{
-    color: white;
+    color: var(--white);
 }
 
 /* Contenido principal */
@@ -22,36 +37,37 @@
 }
 
 .row{
+    margin: auto;
     display: flex;
-    align-items: center;
     justify-content: space-around;
 }
 
 /*1ra Columna*/
 .cartelera {
+    margin: auto;
     display: flex;
     flex-direction: column;
 
     padding: 1rem;
     width: 40rem;
 
-    background-color: rgba(194, 194, 194, 0.3);
+    background-color: var(--transparent2);
 }
 
 .titulo{
     font-size: 35px;
-    color: white;
-    background-color: rgba(194, 194, 194, 0);
+    color: var(--white);
+    background-color: var(--transparent1);
 }
 
 .subtitulo{
-    color: greenyellow;
-    background-color: rgba(194, 194, 194, 0);
+    color: var(--secondary);
+    background-color: var(--transparent1);
 }
 
 p{
-    color: white;
-    background-color: rgba(194, 194, 194, 0);
+    color: var(--white);
+    background-color: var(--transparent1);
 }
 
 .parrafo{
@@ -67,20 +83,21 @@ p{
 #btn-inscripcion{
     margin: auto;
     padding: 1rem;
-    border-radius: 0.5rem;
-    border-color: greenyellow;
     
-    color: white;
     font-size: 15px;
     font-weight: bold;
-    background-color: greenyellow;
+
+    color: var(--white);
+    border-radius: 0.5rem;
+    border-color: var(--secondary);
+    background-color: var(--secondary);
 }
 
 #toggleButton{
     margin: 1px;
-    color: white;
 
-    background-color: rgba(194, 194, 194, 0);
+    color: var(--white);
+    background-color: var(--transparent1);
 }
 
 /* 2da Columna */
@@ -90,25 +107,60 @@ p{
 
 .cartelera-img{
     height: 40rem;
-    width: 47rem;
+    width: 40rem;
 
     object-fit: cover;
 }
 
 /*3ra Columna*/
-ul, li{
+.icono-secciones{
+    margin: auto;
+    display: flex;
     padding: 1rem;
+    
+    justify-content: end;
+}
+
+#list-icons, li{
+    padding: 1rem;
+
+    align-items: center;
     list-style: none;
+}
+
+.list-li:hover{
+    animation: bigIcon 3s linear infinite;
+}
+
+/* Animación en botón */
+@keyframes bigIcon {
+    0%{
+        transform: scale(1.2);
+    }
+    50%{
+        transform: scale(1.4);
+    }
+    100%{
+        transform: scale(1.2);
+    }
+}
+
+#list-seccion{
+    margin: auto;
+    display: flex;
+    align-items: center;
+
+    flex-direction: column;
 }
 
 /* Menú derecho */
 #secciones{
-    color: white;
-    background-color: rgb(4, 131, 205);
+    color: var(--white);
+    background-color: var(--primary);
 }
 
 #secciones li:hover{
-    color: greenyellow;
+    color: var(--secondary);
 }
 
 /* Pie de página */
@@ -119,37 +171,70 @@ ul, li{
     bottom: 0;
 }
 
-/* Media querys */
+/* Media querys -> responsividad para celular */
 @media (min-width: 360px) and (max-width: 700px){
     .nav, .main, .footer{
-        background-color: rgb(4, 131, 205);
         font-family: Arial, Helvetica, sans-serif;
+
+        background-color: var(--primary);
     }
 
-    .main{
-        justify-content: space-around;
-        padding-bottom: 15.5rem;
+    .row{
+        height: 38rem;
+        padding: 1rem;
+    }
+
+    .col{
+        display: contents;
     }
 
     .cartelera {
-        width: 20rem;
-        justify-content: column;
-        background-color: rgba(194, 194, 194, 0.3);
+        background-color: var(--transparent2);
     }
 
     .cartelera-img{
-        display: none;
+        display: none; /* oculto columna de imagen */
+    }
+    
+    /* Estilos para listas */
+    .icono-secciones{
+        margin: auto;
+        display: flex;
+    }
+    
+    #list-icons, li{
+        display: inline-block;
+        align-items: center;
     }
 
+    /* Sidenav */
+    .offcanvas-body{
+        margin: auto;
+        display: flex;
+        align-items: center;
+
+        justify-content: space-around;
+    }
+
+    #list-seccion{
+        margin: auto;
+        display: flex;
+        align-items: center;
+
+        flex-direction: column;
+    }
+
+    /* Botón */
     #btn-inscripcion{
         margin: auto;
         padding: 0.5rem;
-        border-radius: 0.5rem;
-        border-color: greenyellow;
         
-        color: white;
         font-size: 15px;
         font-weight: bold;
-        background-color: greenyellow;
+
+        color: var(--white);
+        border-radius: 0.5rem;
+        border-color: var(--secondary);
+        background-color: var(--secondary);
     }
 }
